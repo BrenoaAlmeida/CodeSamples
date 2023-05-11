@@ -4,6 +4,6 @@ namespace CodeSamples
 {
     public class GlobalUsings
     {
-        Person p = new Person();
+        //Person p = new Person();
     }
 }

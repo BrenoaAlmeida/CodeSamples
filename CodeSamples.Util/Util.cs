@@ -1,4 +1,5 @@
 ﻿using System.IO.Compression;
+using System.Formats.Tar;
 
 namespace CodeSamples.Util
 {
@@ -46,6 +47,22 @@ namespace CodeSamples.Util
             }
             string nomeArquivo = nome + ".zip";
             CompactarArquivos(files, caminho, nomeArquivo);
+        }
+
+        //Usado no .NET 7 para frente
+        public void CriarArquivoTar(string caminhoArquivoFonte, string caminhoDestino)
+        {
+            TarFile.CreateFromDirectory(caminhoArquivoFonte, caminhoDestino, false);
+            Console.WriteLine("");
+            Console.WriteLine("Arquivo TAR criado com sucesso!!");
+        }
+
+        public void ExtrairArquivoTar(string caminhoArquivoFonte, string caminhoDestino)
+        {
+            TarFile.ExtractToDirectory(caminhoArquivoFonte, caminhoDestino, false);
+            Console.WriteLine("");
+            Console.WriteLine("Arquivo TAR extraido com sucesso para o seguinte caminho: ");
+            Console.WriteLine(caminhoDestino);
         }
     }
 }
