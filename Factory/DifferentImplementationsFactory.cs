@@ -1,7 +1,7 @@
 ﻿using CodeSamples.Model;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Factory;
+namespace CodeSamples.Factory;
 
 public static class DifferentImplementationsFactoryExtension
 {
