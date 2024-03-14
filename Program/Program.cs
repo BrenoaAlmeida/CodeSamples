@@ -1,6 +1,3 @@
-using CodeSamples.Model;
-using CodeSamples.Util;
-using System.Runtime.CompilerServices;
 using Visual_Code;
 
 namespace CodeSamples

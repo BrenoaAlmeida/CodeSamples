@@ -1,7 +1,7 @@
-﻿using CodeSamples.Model;
+﻿using Model;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CodeSamples.Factory;
+namespace Factory;
 
 public static class GenerateClassWithDataFactoryExtension
 {

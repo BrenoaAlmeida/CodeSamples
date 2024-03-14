@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace CodeSamples.Factory;
+namespace Factory;
 
 public static class AbstractFactoryExtension
 {

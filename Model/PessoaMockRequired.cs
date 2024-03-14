@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace CodeSamples.Model
+namespace Model
 {
 
     //Funcionalidade do .NET 7 para frente

@@ -1,7 +1,7 @@
 ﻿using Bogus;
-using static CodeSamples.Util.Enumeracao;
+using static Util.Enumeracao;
 
-namespace CodeSamples.Model;
+namespace Model;
 
 public class BogusGenerator : IDataGenerador
 {

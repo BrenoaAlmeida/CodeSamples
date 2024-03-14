@@ -1,5 +1,3 @@
-using System;
-
 /*Antes do C# 10 o codigo costumava ser assim (Block Scoped)
 namespace CodeSamples
 {

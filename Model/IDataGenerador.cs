@@ -1,4 +1,4 @@
-﻿namespace CodeSamples.Model;
+﻿namespace Model;
 
 public interface IDataGenerador
 {

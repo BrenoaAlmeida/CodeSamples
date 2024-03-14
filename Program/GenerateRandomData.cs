@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace CodeSamples.Model;
+namespace Model;
 public class GenerateRandomData<IDataGenerator>
 {
     public void Run()

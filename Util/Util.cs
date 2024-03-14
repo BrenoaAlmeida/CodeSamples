@@ -1,8 +1,10 @@
 ﻿using System.IO.Compression;
 using System.Formats.Tar;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
-namespace CodeSamples.Util
+namespace Util
 {
     public class Util
     {
@@ -137,6 +139,36 @@ namespace CodeSamples.Util
             }
 
             File.WriteAllLines(caminhoDoArquivo, linhas);
+        }
+
+        public static string JavaScriptStringDecode(string source)
+        {
+            // Substituir alguns caracteres.
+            var decoded = source.Replace(@"\'", "'")
+                            .Replace(@"\""", @"""")
+                            .Replace(@"\/", "/")
+                            .Replace(@"\t", "\t")
+                            .Replace(@"\n", "\n");
+
+            // Substituir texto escapado unicode.
+            var rx = new Regex(@"\\[uU]([0-9A-F]{4})");
+
+            decoded = rx.Replace(decoded, match => ((char)Int32.Parse(match.Value.Substring(2), NumberStyles.HexNumber))
+                                                    .ToString(CultureInfo.InvariantCulture));
+
+            return decoded;
+        }
+
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
+
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
         }
     }
 }

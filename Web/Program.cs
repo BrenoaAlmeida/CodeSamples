@@ -1,4 +1,4 @@
-using CodeSamples.Model;
+using Model;
 using Factory;
 
 var builder = WebApplication.CreateBuilder(args);
